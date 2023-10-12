@@ -3,7 +3,6 @@ import UserCard from "@/components/UserCard/UserCard";
 import styles from './page.module.css'
 
 export default async function Users() {
-    throw new Error('This is an error'); // Error components must be Client components
     const users = await prisma.user.findMany();
     
     return (
